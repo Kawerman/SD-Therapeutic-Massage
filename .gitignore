@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Node (only if a tool is ever added; no build required)
+node_modules/
+npm-debug.log*
+
+# Local env — never commit secrets
+.env
+.env.*
+.dev.vars

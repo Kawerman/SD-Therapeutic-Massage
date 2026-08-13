@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Massage therapy mark">
+  <rect width="64" height="64" rx="14" fill="#5b7c6f"/>
+  <!-- Simple lotus / leaf motif -->
+  <path d="M32 14c4 6 4 12 0 18-4-6-4-12 0-18z" fill="#e8efe9"/>
+  <path d="M32 32c6-4 12-4 18 0-6 4-12 4-18 0z" fill="#e8efe9" opacity="0.9"/>
+  <path d="M32 32c-6-4-12-4-18 0 6 4 12 4 18 0z" fill="#e8efe9" opacity="0.9"/>
+  <path d="M32 32c3 5 3 11 0 16-3-5-3-11 0-16z" fill="#cfe0d4"/>
+  <circle cx="32" cy="32" r="3.5" fill="#f7f5f0"/>
+</svg>
