@@ -11,6 +11,6 @@
     <path d="M0 20c30-20 60-20 90 0-30 20-60 20-90 0z" fill="#5b7c6f" opacity="0.85"/>
     <path d="M0 20c-30-20-60-20-90 0 30 20 60 20 90 0z" fill="#5b7c6f" opacity="0.85"/>
   </g>
-  <text x="600" y="440" text-anchor="middle" font-family="system-ui, sans-serif" font-size="56" font-weight="700" fill="#2c332f">{{BUSINESS_NAME}}</text>
-  <text x="600" y="500" text-anchor="middle" font-family="system-ui, sans-serif" font-size="30" fill="#5b7c6f">Therapeutic Massage · Book Online</text>
+  <text x="600" y="440" text-anchor="middle" font-family="system-ui, sans-serif" font-size="56" font-weight="700" fill="#2c332f">SD Therapeutic Massage</text>
+  <text x="600" y="500" text-anchor="middle" font-family="system-ui, sans-serif" font-size="30" fill="#5b7c6f">Mobile Massage in San Diego · Book Online</text>
 </svg>

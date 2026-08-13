@@ -1,5 +1,5 @@
 /* ============================================================
-   {{BUSINESS_NAME}} — styles
+   SD Therapeutic Massage — styles
    Mobile-first, calm palette, minimal. No frameworks.
    ============================================================ */
 
@@ -223,6 +223,7 @@ button:focus-visible {
 .service:hover { box-shadow: 0 8px 24px rgba(44, 51, 47, .08); transform: translateY(-2px); }
 .service-meta { color: var(--sage-dark); font-weight: 600; margin-bottom: .5rem; }
 .service p:last-child { margin-bottom: 0; color: var(--muted); }
+.services-note { margin-top: 1.5rem; color: var(--muted); font-size: .95rem; }
 
 /* ---------- About ---------- */
 .about-inner {
@@ -273,6 +274,7 @@ button:focus-visible {
 /* ---------- Location ---------- */
 .location-inner { max-width: 640px; }
 address { font-style: normal; font-size: 1.1rem; margin-bottom: .75rem; }
+.service-area { font-size: 1.05rem; }
 .hours { white-space: pre-line; color: var(--muted); }
 .contact-list { list-style: none; padding: 0; margin: 0 0 1.5rem; }
 .contact-list a { font-weight: 600; text-decoration: none; }
@@ -286,7 +288,8 @@ address { font-style: normal; font-size: 1.1rem; margin-bottom: .75rem; }
   margin-top: 0;
 }
 .footer-inner { text-align: center; }
-.footer-brand { font-weight: 700; color: #fff; font-size: 1.1rem; margin-bottom: 1rem; }
+.footer-brand { font-weight: 700; color: #fff; font-size: 1.1rem; margin-bottom: .35rem; }
+.footer-tag { color: #96a29c; font-size: .95rem; margin-bottom: 1rem; }
 .footer-nav { display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
 .footer-nav a { color: #cdd6d1; text-decoration: none; }
 .footer-nav a:hover { color: #fff; }

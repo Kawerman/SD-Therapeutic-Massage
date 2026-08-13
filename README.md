@@ -26,26 +26,37 @@ npx serve .
 Then open http://localhost:8080. The Square widget loads from Square's CDN, so
 booking works locally too.
 
-## Where the placeholders live
+## Business details (live content)
 
-All human-editable values use greppable `{{TOKENS}}`. Search the repo for `{{`
-to find them. Primary locations:
+Real details are filled in — there are no `{{TOKENS}}` left. Current content:
 
-| Token | Files | Notes |
-|---|---|---|
-| `{{BUSINESS_NAME}}` | `index.html`, `assets/og-image.svg` | Brand name (also in `<title>`, JSON-LD, footer) |
-| `{{THERAPIST_NAME}}` | `index.html` | Therapist name / About section |
-| `{{TAGLINE}}` | `index.html` | Hero one-liner |
-| `{{ABOUT_BIO}}` | `index.html` | About paragraph |
-| `{{ADDRESS}}`, `{{CITY_STATE_ZIP}}` | `index.html` | Address (also JSON-LD + map link) |
-| `{{GEO_LAT}}`, `{{GEO_LNG}}` | `index.html` | Coordinates in JSON-LD |
-| `{{PHONE}}`, `{{EMAIL}}` | `index.html` | `tel:` / `mailto:` links + JSON-LD |
-| `{{HOURS}}` | `index.html` | Human-readable hours (also update `openingHoursSpecification` in the JSON-LD) |
-| `{{DOMAIN_URL}}` | `index.html`, `robots.txt`, `sitemap.xml` | Canonical URL, e.g. `https://massagebysd.com` |
-| Services | `index.html` (`.services-grid`) | Edit the `<li class="service">` cards directly |
+- **Business:** SD Therapeutic Massage
+- **Area:** San Diego, CA — **mobile only, no storefront**
+- **Phone:** 619-693-6959 · **Email:** silas@massagebysd.com
+- **Services:** Chair Massage (30 min), Table Massage (60 min)
+- **Hours:** by appointment
+- **Rates:** intentionally not hardcoded — the Square booking calendar is the
+  single source of truth for pricing.
 
-**After filling placeholders,** double-check the JSON-LD block in
-`index.html` (name, address, geo, phone, hours) and the OG/Twitter meta tags.
+Because this is a **service-area business**, the JSON-LD deliberately omits
+`streetAddress` and `geo` and uses `areaServed` instead. If a physical location
+is ever added, add those fields back.
+
+### Still to confirm
+
+These were left out on purpose rather than guessed:
+
+- **Therapist name(s)** — the About section is written about the business, not a
+  named person.
+- **Credentials** — "licensed & insured" / CMT license number is *not* claimed
+  anywhere. Add it only once verified.
+- **Service area specifics** — neighborhoods covered, travel radius, travel fee.
+- **Real hours** — if set hours exist, add an `openingHoursSpecification` to the
+  JSON-LD.
+
+Edit points: business copy is in `index.html`; the service cards are the
+`<li class="service">` items; the structured data is the single
+`application/ld+json` block in `<head>`.
 
 ## The Square booking embed
 
@@ -67,9 +78,13 @@ Square settings to keep aligned with this site's constraints:
 ## Assets to replace before launch
 
 Placeholder art was auto-generated; swap these for real files (same paths):
-- `assets/therapist.jpg` — About photo (currently a placeholder; also, the file
-  is PNG data with a `.jpg` name — export a real JPG when replacing).
-- `assets/og-image.png` — 1200×630 social share image.
+- `assets/therapist.jpg` — About photo (currently a generic placeholder shape;
+  also, the file is PNG data with a `.jpg` name — export a real JPG when
+  replacing). A real photo of the therapist or a session setup would help
+  conversion a lot.
+- `assets/og-image.png` — 1200×630 social share image. Regenerate from
+  `assets/og-image.svg` with:
+  `rsvg-convert -w 1200 -h 630 assets/og-image.svg -o assets/og-image.png`
 - `favicon.svg` / `favicon.ico` / `assets/apple-touch-icon.png` — brand icons.
 
 ## Deploy / redeploy
